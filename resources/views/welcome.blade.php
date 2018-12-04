@@ -13,7 +13,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -59,7 +59,7 @@
             </nav>
 
             <div class="fh5co-footer">
-                
+
                 <ul>
                     <li><img src="images/Itadir.png" alt="" style="padding: 5px 0; width: 100px;"></li>
                     <li><img src="images/Sennova.png" alt="" style="padding: 5px 0; width: 100px;"></li>
@@ -73,90 +73,18 @@
         <div id="fh5co-main">
 
             <div class="fh5co-narrow-content">
-                <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Librería de Dobles Digitales</span></h2>
+                <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Proyectos</span></h2>
                 <div class="row animate-box" data-animate-effect="fadeInLeft">
+                    @foreach($posts as $post)
                     <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Ciclos de marcha</h3>
-                            <p>Caminando y corriendo</p>
+                        {{-- <a href="{{ route('detail/',['id'=>$post->id]) }}"> --}}
+                            <a href="{{ url('viewDetail',[$post->id]) }}">
+                            <img src="{{Storage::url($post->imgPublicacion)}}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+                            <h3 class="fh5co-work-title">{{ $post->nombre }}</h3>
+                            {{-- <p>Caminando y corriendo</p> --}}
                         </a>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Saltos</h3>
-                            <p>Desde el origen y puntos elevados</p>
-                        </a>
-                    </div>
-                    <div class="clearfix visible-sm-block"></div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Caídas</h3>
-                            <p>Por zancadilla y desplome</p>
-                        </a>
-                    </div>
-                    <div class="clearfix visible-md-block"></div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_4.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Ciclos de pelea</h3>
-                            <p>Ciclos de golpes con puño y patada</p>
-                        </a>
-                    </div>
-                    <div class="clearfix visible-sm-block"></div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_5.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Muertes</h3>
-                            <p>Por disparos y armas blancas</p>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_6.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Movimientos varios </h3>
-                            <p>Acciones comunes como chatear, hacer aseo</p>
-                        </a>
-                    </div>
-                    <div class="clearfix visible-md-block"></div>
-                </div>
-            </div>
-
-            <div class="fh5co-narrow-content">
-                <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Piezas de Fotogrametría</span></h2>
-                <div class="row animate-box" data-animate-effect="fadeInLeft">
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Piezas de la Ciudad</h3>
-                            <p>Elementos de la calle comunes de Medellin</p>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Vehiculos</h3>
-                            <p>Buses, Motocicletas, Automóviles</p>
-                        </a>
-                    </div>
-                    <div class="clearfix visible-sm-block"></div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Naturaleza</h3>
-                            <p>Árboles</p>
-                        </a>
-                    </div>
-                    <div class="clearfix visible-md-block"></div>
-                    <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-                        <a href="work.html">
-                            <img src="images/work_4.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-                            <h3 class="fh5co-work-title">Lugares</h3>
-                            <p>Edificios, Fachadas, Calles</p>
-                        </a>
-                    </div>
+                    @endforeach
                     <div class="clearfix visible-md-block"></div>
                 </div>
             </div>

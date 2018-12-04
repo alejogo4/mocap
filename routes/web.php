@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'viewsController@welcome');
 
 Route::get('aboutView',function(){
 	return view('about');
@@ -22,6 +20,8 @@ Route::get('aboutView',function(){
 Route::get('contactView',function(){
 	return view('contact');
 });
+
+Route::get('viewDetail/{id}','viewsController@detail');
 
 Route::post('newPost','PostController@store');
 
