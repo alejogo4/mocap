@@ -8,5 +8,5 @@ class Attachment extends Model
 {
     protected $table="archivos";
     protected $fillable=['url', 'id_publicacion'];
-    public $timestamps="false";
+    public $timestamps=false;
 }

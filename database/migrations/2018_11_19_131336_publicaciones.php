@@ -16,7 +16,7 @@ class Publicaciones extends Migration
         Schema::create('publicaciones', function(Blueprint $publicaciones){
             $publicaciones->increments('id');
             $publicaciones->string('nombre');
-            $publicaciones->string('descripcion');
+            $publicaciones->string('descripcion',2000);
             $publicaciones->string('imgPublicacion');
         });
     }

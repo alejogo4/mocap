@@ -88,8 +88,8 @@
 					</div>
                 </div>
                 <ul>
-                    @foreach($attachments as $attachment)
-                <a href="{{ Storage::url($attachment->url) }}" download>{{ $attachment->url }}</a>
+                    @foreach($attachments as $key => $attachment)
+                <a href="{{ Storage::url($attachment->url) }}" download>Descargar parte {{ $key+=1 }}</a>
                     <br>
                     @endforeach
                 </ul>
